@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    form { max-width: 600px; padding: 1rem 1.5rem; border: 1px solid #ccc; border-radius: 10px; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, select { width: 100%; padding: 0.4rem; margin-top: 0.3rem; }
+    button { margin-top: 1.5rem; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; background: #0078D4; color: #fff; cursor: pointer; }
+    button:hover { background: #005fa3; }
+  </style>
+</head>
+<body>
+  <h1>Registro de Usuario</h1>
+
+  <form action="registro" method="post" enctype="multipart/form-data"> <!-- multipart por que se van a enviar ficheros -->
+    
+    <label for="nombre">usuario:</label>
+    <input type="text" id="usuario" name="usuario" required>
+
+    <label for="nombre">Contraseña:</label>
+    <input type="password" id="password" name="contraseña" required>
+
+    <input type="file" name="fichero" required>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

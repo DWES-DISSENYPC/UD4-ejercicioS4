@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro completado</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    .card { max-width: 640px; padding: 1rem 1.5rem; border: 1px solid #ddd; border-radius: 12px; }
+    .grid { display: grid; grid-template-columns: 1fr 2fr; gap: .5rem 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Registro completado</h1>
+  <div th:text="${msj}"><strong> </strong></div>
+  <div class="card">
+    <div class="grid">
+      <div><strong>Nombre</strong></div>
+      <div th:text="${usuario.usuario}"> </div>
+    </div>
+  </div>
+  <p><a th:href="@{/index.html}">Volver al formulario</a></p>
+</body>
+</html>
